@@ -163,7 +163,41 @@ func (r *RedisClient) checkPoWExist(params []string) (bool, error) {
 	val, err := r.client.ZAdd(r.formatKey("pow"), redis.Z{Score: float64(666666), Member: strings.Join(params, ":")}).Result()
 	return val == 0, err
 }
+func (r *RedisClient) GetAllWorkShares() (map[string]int) {
+	tx := r.client.Multi()
+	defer tx.Close()
 
+	minerMap :=make(map[string]int)
+	miners :=tx.HGetAllMap(r.formatKey("shares", "roundCurrent"))
+	for work, share := range miners.Val() {
+		share, _ := strconv.ParseInt(share, 10, 64)
+		minerMap[work] =int(share)
+	}
+	return minerMap
+}
+func (r *RedisClient) ClearWorkShare(work string) (err error) {
+	tx := r.client.Multi()
+	defer tx.Close()
+	_, err = tx.Exec(func() error {
+		tx.HSet(r.formatKey("shares", "roundCurrent"),work,"0")
+		return nil
+	})
+	return err
+}
+func (r *RedisClient) ClearAllWorkShare() (err error) {
+	tx := r.client.Multi()
+	defer tx.Close()
+
+	allMaps :=tx.HGetAllMap(r.formatKey("shares", "roundCurrent")).Val()
+	for k:=range allMaps {
+		allMaps[k] = "0"
+	}
+	_, err = tx.Exec(func() error {
+		tx.HMSetMap(r.formatKey("shares", "roundCurrent"),allMaps)
+		return nil
+	})
+	return err
+}
 func (r *RedisClient) WriteShare(id string,params []string) (bool, error) {
 	exist, err := r.checkPoWExist(params)
 	if err != nil {
@@ -177,14 +211,14 @@ func (r *RedisClient) WriteShare(id string,params []string) (bool, error) {
 	defer tx.Close()
 
 	_, err = tx.Exec(func() error {
-		r.writeShare(tx, id)
+		r.WriteShareId(tx, id)
 		tx.HIncrBy(r.formatKey("stats"), "totalShares", 1)
 		return nil
 	})
 	return false, err
 }
 
-func (r *RedisClient) writeShare(tx *redis.Multi, id string) {
+func (r *RedisClient) WriteShareId(tx *redis.Multi, id string) {
 	tx.HIncrBy(r.formatKey("shares", "roundCurrent"), id, 1)
 }
 
@@ -559,43 +593,6 @@ func convertStringMap(m map[string]string) map[string]interface{} {
 	return result
 }
 
-// WARNING: Must run it periodically to flush out of window hashrate entries
-func (r *RedisClient) FlushStaleStats(window, largeWindow time.Duration) (int64, error) {
-	now := util.MakeTimestamp() / 1000
-	max := fmt.Sprint("(", now-int64(window/time.Second))
-	total, err := r.client.ZRemRangeByScore(r.formatKey("hashrate"), "-inf", max).Result()
-	if err != nil {
-		return total, err
-	}
-
-	var c int64
-	miners := make(map[string]struct{})
-	max = fmt.Sprint("(", now-int64(largeWindow/time.Second))
-
-	for {
-		var keys []string
-		var err error
-		c, keys, err = r.client.Scan(c, r.formatKey("hashrate", "*"), 100).Result()
-		if err != nil {
-			return total, err
-		}
-		for _, row := range keys {
-			login := strings.Split(row, ":")[2]
-			if _, ok := miners[login]; !ok {
-				n, err := r.client.ZRemRangeByScore(r.formatKey("hashrate", login), "-inf", max).Result()
-				if err != nil {
-					return total, err
-				}
-				miners[login] = struct{}{}
-				total += n
-			}
-		}
-		if c == 0 {
-			break
-		}
-	}
-	return total, nil
-}
 
 func (r *RedisClient) CollectStats(smallWindow time.Duration, maxBlocks, maxPayments int64) (map[string]interface{}, error) {
 	window := int64(smallWindow / time.Second)
