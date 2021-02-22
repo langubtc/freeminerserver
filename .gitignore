@@ -1,0 +1,6 @@
+.DS_Store
+pool.json
+testnet.json
+
+/build/_workspace/
+/build/bin/

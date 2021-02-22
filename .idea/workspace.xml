@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cccf29f2-2684-45e5-898e-7a53d9197f5d" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Go File" />
+      </list>
+    </option>
+  </component>
+  <component name="GOROOT" path="/usr/local/Cellar/go/1.15.6/libexec" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="ProjectId" id="1ez09vUAVlz9vG1rzI8sttMzBci" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultGoTemplateProperty" value="Go File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="go.import.settings.migrated" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.tried.to.enable.integration.vgo.integrator" value="true" />
+    <property name="go.vendoring.notification.had.been.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="go.sdk" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/payouts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/proxy" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Go Build.go build freeminerserver">
+    <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
+      <module name="eth-pool" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <kind value="FILE" />
+      <filePath value="$PROJECT_DIR$/" />
+      <package value="eth-pool" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go build freeminerserver" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="eth-pool" />
+      <working_directory value="$PROJECT_DIR$" />
+      <kind value="PACKAGE" />
+      <filePath value="$PROJECT_DIR$/main.go" />
+      <package value="freeminerserver" />
+      <directory value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestPoolProxy_ReadMessage in eth-pool/pool-proxy" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="eth-pool" />
+      <working_directory value="$PROJECT_DIR$/pool-proxy" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="eth-pool/pool-proxy" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestPoolProxy_ReadMessage$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestPoolProxy_ReadMessage in github.com/sammy007/open-ethereum-pool/pool-proxy" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="open-ethereum-pool" />
+      <working_directory value="$PROJECT_DIR$/pool-proxy" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="github.com/sammy007/open-ethereum-pool/pool-proxy" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestPoolProxy_ReadMessage$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestProxy in eth-pool" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="eth-pool" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="eth-pool" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestProxy$" />
+      <method v="2" />
+    </configuration>
+    <configuration name="TestProxy in freeminerserver" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="eth-pool" />
+      <working_directory value="$PROJECT_DIR$" />
+      <framework value="gotest" />
+      <kind value="PACKAGE" />
+      <package value="freeminerserver" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <pattern value="^TestProxy$" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="GoTestRunConfiguration" factoryName="Go Test">
+      <module name="eth-pool" />
+      <working_directory value="$PROJECT_DIR$/" />
+      <go_parameters value="-i" />
+      <framework value="gotest" />
+      <kind value="DIRECTORY" />
+      <package value="eth-pool" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Go Build.go build freeminerserver" />
+        <item itemvalue="Go Test.TestProxy in freeminerserver" />
+        <item itemvalue="Go Test.TestProxy in eth-pool" />
+        <item itemvalue="Go Test.TestPoolProxy_ReadMessage in eth-pool/pool-proxy" />
+        <item itemvalue="Go Test.TestPoolProxy_ReadMessage in github.com/sammy007/open-ethereum-pool/pool-proxy" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VgoProject">
+    <integration-enabled>true</integration-enabled>
+    <proxy>direct</proxy>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="473" y="90" key="#TestProxy_in_eth-pool" timestamp="1613960477962">
+      <screen x="0" y="23" width="1536" height="869" />
+    </state>
+    <state x="473" y="90" key="#TestProxy_in_eth-pool/0.23.1536.869@0.23.1536.869" timestamp="1613960477962" />
+    <state x="490" y="264" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1608815380665">
+      <screen x="0" y="23" width="1536" height="863" />
+    </state>
+    <state x="490" y="264" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1536.863@0.23.1536.863" timestamp="1608815380665" />
+    <state width="1093" height="170" key="GridCell.Tab.0.bottom" timestamp="1613963355464">
+      <screen x="0" y="23" width="1536" height="869" />
+    </state>
+    <state width="747" height="194" key="GridCell.Tab.0.bottom/0.23.1536.863@0.23.1536.863" timestamp="1608821908267" />
+    <state width="1494" height="225" key="GridCell.Tab.0.bottom/0.23.1536.865@0.23.1536.865" timestamp="1608703017739" />
+    <state width="1241" height="187" key="GridCell.Tab.0.bottom/0.23.1536.866@0.23.1536.866" timestamp="1613831288163" />
+    <state width="1097" height="189" key="GridCell.Tab.0.bottom/0.23.1536.867@0.23.1536.867" timestamp="1613826329306" />
+    <state width="1093" height="170" key="GridCell.Tab.0.bottom/0.23.1536.869@0.23.1536.869" timestamp="1613963355464" />
+    <state width="1238" height="243" key="GridCell.Tab.0.bottom/0.23.1536.871@0.23.1536.871" timestamp="1613839339822" />
+    <state width="1093" height="170" key="GridCell.Tab.0.center" timestamp="1613963355463">
+      <screen x="0" y="23" width="1536" height="869" />
+    </state>
+    <state width="747" height="194" key="GridCell.Tab.0.center/0.23.1536.863@0.23.1536.863" timestamp="1608821908266" />
+    <state width="1494" height="225" key="GridCell.Tab.0.center/0.23.1536.865@0.23.1536.865" timestamp="1608703017738" />
+    <state width="1241" height="187" key="GridCell.Tab.0.center/0.23.1536.866@0.23.1536.866" timestamp="1613831288162" />
+    <state width="1097" height="189" key="GridCell.Tab.0.center/0.23.1536.867@0.23.1536.867" timestamp="1613826329305" />
+    <state width="1093" height="170" key="GridCell.Tab.0.center/0.23.1536.869@0.23.1536.869" timestamp="1613963355463" />
+    <state width="1238" height="243" key="GridCell.Tab.0.center/0.23.1536.871@0.23.1536.871" timestamp="1613839339821" />
+    <state width="1093" height="170" key="GridCell.Tab.0.left" timestamp="1613963355463">
+      <screen x="0" y="23" width="1536" height="869" />
+    </state>
+    <state width="747" height="194" key="GridCell.Tab.0.left/0.23.1536.863@0.23.1536.863" timestamp="1608821908265" />
+    <state width="1494" height="225" key="GridCell.Tab.0.left/0.23.1536.865@0.23.1536.865" timestamp="1608703017738" />
+    <state width="1241" height="187" key="GridCell.Tab.0.left/0.23.1536.866@0.23.1536.866" timestamp="1613831288161" />
+    <state width="1097" height="189" key="GridCell.Tab.0.left/0.23.1536.867@0.23.1536.867" timestamp="1613826329305" />
+    <state width="1093" height="170" key="GridCell.Tab.0.left/0.23.1536.869@0.23.1536.869" timestamp="1613963355463" />
+    <state width="1238" height="243" key="GridCell.Tab.0.left/0.23.1536.871@0.23.1536.871" timestamp="1613839339821" />
+    <state width="1093" height="170" key="GridCell.Tab.0.right" timestamp="1613963355464">
+      <screen x="0" y="23" width="1536" height="869" />
+    </state>
+    <state width="747" height="194" key="GridCell.Tab.0.right/0.23.1536.863@0.23.1536.863" timestamp="1608821908267" />
+    <state width="1494" height="225" key="GridCell.Tab.0.right/0.23.1536.865@0.23.1536.865" timestamp="1608703017739" />
+    <state width="1241" height="187" key="GridCell.Tab.0.right/0.23.1536.866@0.23.1536.866" timestamp="1613831288162" />
+    <state width="1097" height="189" key="GridCell.Tab.0.right/0.23.1536.867@0.23.1536.867" timestamp="1613826329306" />
+    <state width="1093" height="170" key="GridCell.Tab.0.right/0.23.1536.869@0.23.1536.869" timestamp="1613963355464" />
+    <state width="1238" height="243" key="GridCell.Tab.0.right/0.23.1536.871@0.23.1536.871" timestamp="1613839339821" />
+    <state x="360" y="183" key="RollbackChangesDialog" timestamp="1608709227255">
+      <screen x="0" y="23" width="1536" height="863" />
+    </state>
+    <state x="360" y="183" key="RollbackChangesDialog/0.23.1536.863@0.23.1536.863" timestamp="1608709227255" />
+    <state x="269" y="95" key="SettingsEditor" timestamp="1610618427108">
+      <screen x="0" y="23" width="1536" height="866" />
+    </state>
+    <state x="269" y="95" key="SettingsEditor/0.23.1536.866@0.23.1536.866" timestamp="1610618427108" />
+    <state x="510" y="87" width="862" height="805" key="find.popup" timestamp="1613960075216">
+      <screen x="0" y="23" width="1536" height="869" />
+    </state>
+    <state x="510" y="88" width="862" height="798" key="find.popup/0.23.1536.863@0.23.1536.863" timestamp="1608735588827" />
+    <state x="510" y="88" width="862" height="800" key="find.popup/0.23.1536.865@0.23.1536.865" timestamp="1609566057767" />
+    <state x="510" y="87" width="862" height="802" key="find.popup/0.23.1536.866@0.23.1536.866" timestamp="1613813098415" />
+    <state x="510" y="88" width="862" height="802" key="find.popup/0.23.1536.867@0.23.1536.867" timestamp="1610798204792" />
+    <state x="510" y="87" width="862" height="805" key="find.popup/0.23.1536.869@0.23.1536.869" timestamp="1613960075216" />
+    <state x="510" y="88" width="862" height="806" key="find.popup/0.23.1536.871@0.23.1536.871" timestamp="1609667238054" />
+    <state x="510" y="89" width="862" height="807" key="find.popup/0.23.1536.873@0.23.1536.873" timestamp="1606315930905" />
+    <state x="637" y="278" width="1077" height="539" key="find.popup/0.23.1920.983@0.23.1920.983" timestamp="1606294909413" />
+    <state x="637" y="279" width="1077" height="541" key="find.popup/0.23.1920.986@0.23.1920.986" timestamp="1606287395883" />
+    <state x="433" y="210" width="670" height="681" key="search.everywhere.popup" timestamp="1609295217590">
+      <screen x="0" y="23" width="1536" height="869" />
+    </state>
+    <state x="433" y="209" width="670" height="676" key="search.everywhere.popup/0.23.1536.863@0.23.1536.863" timestamp="1608654091959" />
+    <state x="433" y="210" width="670" height="681" key="search.everywhere.popup/0.23.1536.869@0.23.1536.869" timestamp="1609295217590" />
+    <state x="498" y="375" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1608710990649">
+      <screen x="0" y="23" width="1536" height="863" />
+    </state>
+    <state x="498" y="375" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.23.1536.863@0.23.1536.863" timestamp="1608710990649" />
+    <state x="498" y="376" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.23.1536.865@0.23.1536.865" timestamp="1608702221794" />
+  </component>
+</project>
