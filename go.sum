@@ -120,8 +120,8 @@ github.com/rjeczalik/notify v0.9.1/go.mod h1:rKwnCoCGeuQnwBtTSPL9Dad03Vh2n40ePRr
 github.com/rs/cors v0.0.0-20160617231935-a62a804a8a00/go.mod h1:gFx+x8UowdsKA9AchylcLynDq+nNFfI8FkUZdN/jGCU=
 github.com/rs/xhandler v0.0.0-20160618193221-ed27b6fd6521/go.mod h1:RvLn4FgxWubrpZHtQLnOf6EwhN2hEMusxZOhcW9H3UQ=
 github.com/russross/blackfriday/v2 v2.0.1/go.mod h1:+Rmxgy9KzJVeS9/2gXHxylqXiyQDYRxCVz55jmeOWTM=
-freeminerserver v0.0.0-20171111114927-bcfc0eb0e683 h1:5sGr1dJAyelixsyB3eBjftKl3+cvNeDsIYsFIfTwS78=
-freeminerserver v0.0.0-20171111114927-bcfc0eb0e683/go.mod h1:ceG8iCx4zh1bdt1zplyFb0YQQrAmWcBcClT2Quo7KXQ=
+github.com/panglove/freeminerserver v0.0.0-20171111114927-bcfc0eb0e683 h1:5sGr1dJAyelixsyB3eBjftKl3+cvNeDsIYsFIfTwS78=
+github.com/panglove/freeminerserver v0.0.0-20171111114927-bcfc0eb0e683/go.mod h1:ceG8iCx4zh1bdt1zplyFb0YQQrAmWcBcClT2Quo7KXQ=
 github.com/shirou/gopsutil v2.20.5+incompatible/go.mod h1:5b4v6he4MtMOwMlS0TUMTu2PcXUg8+E1lC7eC3UO/RA=
 github.com/shurcooL/sanitized_anchor_name v1.0.0/go.mod h1:1NzhyTcUVG4SuEtjjoZeVRXNmyL/1OwPU0+IJeTBvfc=
 github.com/spaolacci/murmur3 v0.0.0-20180118202830-f09979ecbc72/go.mod h1:JwIasOWyU6f++ZhiEuf87xNszmSA2myDM2Kzu9HwQUA=

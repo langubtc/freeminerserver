@@ -2,7 +2,7 @@ package proxy
 
 import (
 	"encoding/json"
-	"freeminerserver/storage"
+	"github.com/panglove/freeminerserver/storage"
 )
 type JSONRpcReq struct {
 	Id     json.RawMessage `json:"id"`

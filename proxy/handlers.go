@@ -5,7 +5,7 @@ import (
 	"regexp"
 	"strings"
 
-	"freeminerserver/util"
+	"github.com/panglove/freeminerserver/util"
 )
 
 // Allow only lowercase hexadecimal with 0x prefix

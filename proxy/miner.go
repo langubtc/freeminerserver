@@ -2,7 +2,7 @@ package proxy
 
 import (
 	"encoding/json"
-	"freeminerserver/rpc"
+	"github.com/panglove/freeminerserver/rpc"
 	"github.com/ethereum/ethash"
 	"log"
 	"sync"

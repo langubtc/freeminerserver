@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"freeminerserver/util"
+	"github.com/panglove/freeminerserver/util"
 )
 
 const (

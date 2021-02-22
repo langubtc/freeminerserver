@@ -9,7 +9,7 @@ import (
 
 	"gopkg.in/redis.v3"
 
-	"freeminerserver/util"
+	"github.com/panglove/freeminerserver/util"
 )
 
 type Config struct {

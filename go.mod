@@ -1,4 +1,4 @@
-module freeminerserver
+module github.com/panglove/freeminerserver
 
 go 1.15
 

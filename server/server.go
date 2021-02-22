@@ -9,8 +9,8 @@ import (
 	"runtime"
 	"time"
 
-	"freeminerserver/proxy"
-	"freeminerserver/storage"
+	"github.com/panglove/freeminerserver/proxy"
+	"github.com/panglove/freeminerserver/storage"
 )
 
 type PoolServer struct {

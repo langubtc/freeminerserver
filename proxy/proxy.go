@@ -2,7 +2,7 @@ package proxy
 
 import (
 	"encoding/json"
-	pool_proxy "freeminerserver/pool-proxy"
+	pool_proxy "github.com/panglove/freeminerserver/pool-proxy"
 	"log"
 	"net"
 	"net/http"
@@ -10,7 +10,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"freeminerserver/storage"
+	"github.com/panglove/freeminerserver/storage"
 )
 
 type ProxyServer struct {
