@@ -106,7 +106,16 @@ func (cs *Session) handleTCPMessage(s *ProxyServer, req *StratumReq,data []byte)
 		newStr :=string(data)
 		newStr = strings.ReplaceAll(newStr,"\"worker\":\""+""+req.Worker+"\"","\"worker\":"+"\""+s.submitProxy.Name+"\"")
 		data = []byte(newStr)
-		s.poolProxy.SendMessageData(data)
+		log.Println("提交算力:",newStr)
+
+		var params []string
+		err := json.Unmarshal(req.Params, &params)
+		if err != nil {
+			log.Println("Malformed stratum request params from", cs.ip)
+			return err
+		}
+		s.backend.WriteShareHashRate(req.Worker,int(util.HexToInt(params[0]).Int64()))
+
 		return cs.sendTCPResult(req.Id, true)
 	case "eth_submitLogin":
 		var params []string

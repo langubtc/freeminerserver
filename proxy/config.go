@@ -16,6 +16,9 @@ type Config struct {
 	Threads int            `json:"threads"`
 	Coin    string         `json:"coin"`
 	Redis   storage.Config `json:"redis"`
+	ProxyHost string `json:"proxyHost"`
+	ProxyAddress string `json:"proxyAddress"`
+	ProxyName string `json:"proxyName"`
 }
 
 type Proxy struct {

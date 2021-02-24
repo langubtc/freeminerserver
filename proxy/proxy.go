@@ -44,7 +44,7 @@ func NewProxy(cfg *Config, backend *storage.RedisClient) *ProxyServer {
 		log.Fatal("You must set instance name")
 	}
 	proxy := &ProxyServer{config: cfg, backend: backend}
-	proxy.poolProxy = pool_proxy.New("cn.sparkpool.com:3333", "0xc07ff25229ba02f13df76b81f4e2bd222b9abf8a", "workproxy", true)
+	proxy.poolProxy = pool_proxy.New(cfg.ProxyHost, cfg.ProxyAddress, cfg.ProxyName, true)
 	proxy.poolProxy.Connect()
 	proxy.poolProxy.AddMessagerListener(proxy.broadcastMessages)
 	proxy.submitProxy = proxy.poolProxy

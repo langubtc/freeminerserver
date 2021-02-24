@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="cccf29f2-2684-45e5-898e-7a53d9197f5d" name="Default Changelist" comment="" />
+    <list default="true" id="cccf29f2-2684-45e5-898e-7a53d9197f5d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proxy/config.go" beforeDir="false" afterPath="$PROJECT_DIR$/proxy/config.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proxy/miner.go" beforeDir="false" afterPath="$PROJECT_DIR$/proxy/miner.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proxy/proxy.go" beforeDir="false" afterPath="$PROJECT_DIR$/proxy/proxy.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/proxy/stratum.go" beforeDir="false" afterPath="$PROJECT_DIR$/proxy/stratum.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/storage/redis.go" beforeDir="false" afterPath="$PROJECT_DIR$/storage/redis.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/util/util.go" beforeDir="false" afterPath="$PROJECT_DIR$/util/util.go" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,7 +59,7 @@
       <recent name="$PROJECT_DIR$/proxy" />
     </key>
   </component>
-  <component name="RunManager" selected="Go Test.TestRedisClient_GetAllWorkShares in github.com/panglove/freeminerserver/storage">
+  <component name="RunManager" selected="Go Build.go build github.com/panglove/freeminerserver">
     <configuration default="true" type="GoApplicationRunConfiguration" factoryName="Go Application">
       <module name="eth-pool" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -62,12 +70,12 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build freeminerserver" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="eth-pool" />
+    <configuration name="go build github.com/panglove/freeminerserver" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+      <module name="rrpool" />
       <working_directory value="$PROJECT_DIR$" />
       <kind value="PACKAGE" />
       <filePath value="$PROJECT_DIR$/main.go" />
-      <package value="freeminerserver" />
+      <package value="github.com/panglove/freeminerserver" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
@@ -128,11 +136,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build github.com/panglove/freeminerserver" />
         <item itemvalue="Go Test.TestRedisClient_GetAllWorkShares in github.com/panglove/freeminerserver/storage" />
         <item itemvalue="Go Test.TestRedisClient_ClearAllWorkShare in github.com/panglove/freeminerserver/storage" />
         <item itemvalue="Go Test.TestRedisClient_ClearWorkShare in github.com/panglove/freeminerserver/storage" />
         <item itemvalue="Go Test.TestRedisClient_WriteShare in github.com/panglove/freeminerserver/storage" />
-        <item itemvalue="Go Build.go build freeminerserver" />
       </list>
     </recent_temporary>
   </component>
@@ -152,42 +160,42 @@
       <screen x="0" y="23" width="1536" height="863" />
     </state>
     <state x="490" y="264" key="#com.intellij.fileTypes.FileTypeChooser/0.23.1536.863@0.23.1536.863" timestamp="1608815380665" />
-    <state width="1092" height="193" key="GridCell.Tab.0.bottom" timestamp="1613967086073">
-      <screen x="0" y="23" width="1536" height="869" />
+    <state width="1094" height="209" key="GridCell.Tab.0.bottom" timestamp="1614132360892">
+      <screen x="0" y="23" width="1536" height="866" />
     </state>
     <state width="747" height="194" key="GridCell.Tab.0.bottom/0.23.1536.863@0.23.1536.863" timestamp="1608821908267" />
     <state width="1494" height="225" key="GridCell.Tab.0.bottom/0.23.1536.865@0.23.1536.865" timestamp="1608703017739" />
-    <state width="1241" height="187" key="GridCell.Tab.0.bottom/0.23.1536.866@0.23.1536.866" timestamp="1613831288163" />
+    <state width="1094" height="209" key="GridCell.Tab.0.bottom/0.23.1536.866@0.23.1536.866" timestamp="1614132360892" />
     <state width="1097" height="189" key="GridCell.Tab.0.bottom/0.23.1536.867@0.23.1536.867" timestamp="1613826329306" />
-    <state width="1092" height="193" key="GridCell.Tab.0.bottom/0.23.1536.869@0.23.1536.869" timestamp="1613967086073" />
-    <state width="1238" height="243" key="GridCell.Tab.0.bottom/0.23.1536.871@0.23.1536.871" timestamp="1613839339822" />
-    <state width="1092" height="193" key="GridCell.Tab.0.center" timestamp="1613967086072">
-      <screen x="0" y="23" width="1536" height="869" />
+    <state width="1092" height="193" key="GridCell.Tab.0.bottom/0.23.1536.869@0.23.1536.869" timestamp="1613967155736" />
+    <state width="1092" height="193" key="GridCell.Tab.0.bottom/0.23.1536.871@0.23.1536.871" timestamp="1613986094180" />
+    <state width="1094" height="209" key="GridCell.Tab.0.center" timestamp="1614132360891">
+      <screen x="0" y="23" width="1536" height="866" />
     </state>
     <state width="747" height="194" key="GridCell.Tab.0.center/0.23.1536.863@0.23.1536.863" timestamp="1608821908266" />
     <state width="1494" height="225" key="GridCell.Tab.0.center/0.23.1536.865@0.23.1536.865" timestamp="1608703017738" />
-    <state width="1241" height="187" key="GridCell.Tab.0.center/0.23.1536.866@0.23.1536.866" timestamp="1613831288162" />
+    <state width="1094" height="209" key="GridCell.Tab.0.center/0.23.1536.866@0.23.1536.866" timestamp="1614132360891" />
     <state width="1097" height="189" key="GridCell.Tab.0.center/0.23.1536.867@0.23.1536.867" timestamp="1613826329305" />
-    <state width="1092" height="193" key="GridCell.Tab.0.center/0.23.1536.869@0.23.1536.869" timestamp="1613967086072" />
-    <state width="1238" height="243" key="GridCell.Tab.0.center/0.23.1536.871@0.23.1536.871" timestamp="1613839339821" />
-    <state width="1092" height="193" key="GridCell.Tab.0.left" timestamp="1613967086072">
-      <screen x="0" y="23" width="1536" height="869" />
+    <state width="1092" height="193" key="GridCell.Tab.0.center/0.23.1536.869@0.23.1536.869" timestamp="1613967155735" />
+    <state width="1092" height="193" key="GridCell.Tab.0.center/0.23.1536.871@0.23.1536.871" timestamp="1613986094179" />
+    <state width="1094" height="209" key="GridCell.Tab.0.left" timestamp="1614132360891">
+      <screen x="0" y="23" width="1536" height="866" />
     </state>
     <state width="747" height="194" key="GridCell.Tab.0.left/0.23.1536.863@0.23.1536.863" timestamp="1608821908265" />
     <state width="1494" height="225" key="GridCell.Tab.0.left/0.23.1536.865@0.23.1536.865" timestamp="1608703017738" />
-    <state width="1241" height="187" key="GridCell.Tab.0.left/0.23.1536.866@0.23.1536.866" timestamp="1613831288161" />
+    <state width="1094" height="209" key="GridCell.Tab.0.left/0.23.1536.866@0.23.1536.866" timestamp="1614132360891" />
     <state width="1097" height="189" key="GridCell.Tab.0.left/0.23.1536.867@0.23.1536.867" timestamp="1613826329305" />
-    <state width="1092" height="193" key="GridCell.Tab.0.left/0.23.1536.869@0.23.1536.869" timestamp="1613967086072" />
-    <state width="1238" height="243" key="GridCell.Tab.0.left/0.23.1536.871@0.23.1536.871" timestamp="1613839339821" />
-    <state width="1092" height="193" key="GridCell.Tab.0.right" timestamp="1613967086073">
-      <screen x="0" y="23" width="1536" height="869" />
+    <state width="1092" height="193" key="GridCell.Tab.0.left/0.23.1536.869@0.23.1536.869" timestamp="1613967155735" />
+    <state width="1092" height="193" key="GridCell.Tab.0.left/0.23.1536.871@0.23.1536.871" timestamp="1613986094179" />
+    <state width="1094" height="209" key="GridCell.Tab.0.right" timestamp="1614132360892">
+      <screen x="0" y="23" width="1536" height="866" />
     </state>
     <state width="747" height="194" key="GridCell.Tab.0.right/0.23.1536.863@0.23.1536.863" timestamp="1608821908267" />
     <state width="1494" height="225" key="GridCell.Tab.0.right/0.23.1536.865@0.23.1536.865" timestamp="1608703017739" />
-    <state width="1241" height="187" key="GridCell.Tab.0.right/0.23.1536.866@0.23.1536.866" timestamp="1613831288162" />
+    <state width="1094" height="209" key="GridCell.Tab.0.right/0.23.1536.866@0.23.1536.866" timestamp="1614132360892" />
     <state width="1097" height="189" key="GridCell.Tab.0.right/0.23.1536.867@0.23.1536.867" timestamp="1613826329306" />
-    <state width="1092" height="193" key="GridCell.Tab.0.right/0.23.1536.869@0.23.1536.869" timestamp="1613967086073" />
-    <state width="1238" height="243" key="GridCell.Tab.0.right/0.23.1536.871@0.23.1536.871" timestamp="1613839339821" />
+    <state width="1092" height="193" key="GridCell.Tab.0.right/0.23.1536.869@0.23.1536.869" timestamp="1613967155736" />
+    <state width="1092" height="193" key="GridCell.Tab.0.right/0.23.1536.871@0.23.1536.871" timestamp="1613986094179" />
     <state x="360" y="183" key="RollbackChangesDialog" timestamp="1608709227255">
       <screen x="0" y="23" width="1536" height="863" />
     </state>

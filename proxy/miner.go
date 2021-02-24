@@ -77,6 +77,7 @@ func (s *ProxyServer) OnSubmitMessages(result string) {
 		}
 
 	}
+	s.backend.WriteShareTime(subInfo.id)
 	log.Printf("share success  %s for %s: %s", subInfo.ip, subInfo.id, subInfo.params)
 	subInfo.cs.sendTCPResult(subInfo.reqId, &reply)
 }

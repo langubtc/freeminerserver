@@ -11,6 +11,12 @@ import (
 
 	"github.com/panglove/freeminerserver/util"
 )
+type WorkStats struct {
+	Share int
+	Hashrate int
+	LastShare int
+}
+
 
 type Config struct {
 	Endpoint string `json:"endpoint"`
@@ -163,15 +169,24 @@ func (r *RedisClient) checkPoWExist(params []string) (bool, error) {
 	val, err := r.client.ZAdd(r.formatKey("pow"), redis.Z{Score: float64(666666), Member: strings.Join(params, ":")}).Result()
 	return val == 0, err
 }
-func (r *RedisClient) GetAllWorkShares() (map[string]int) {
+func (r *RedisClient) GetAllWorkShares() (map[string]WorkStats) {
 	tx := r.client.Multi()
 	defer tx.Close()
 
-	minerMap :=make(map[string]int)
+	minerMap :=make(map[string]WorkStats)
 	miners :=tx.HGetAllMap(r.formatKey("shares", "roundCurrent"))
+	shareTimes :=tx.HGetAllMap(r.formatKey("stats", "lastShare")).Val()
+	sharesHahsrate :=tx.HGetAllMap(r.formatKey("stats", "hashrate")).Val()
 	for work, share := range miners.Val() {
+		newWork:=new(WorkStats)
 		share, _ := strconv.ParseInt(share, 10, 64)
-		minerMap[work] =int(share)
+		hash, _ := strconv.ParseInt(sharesHahsrate[work], 10, 64)
+		time, _ := strconv.ParseInt(shareTimes[work], 10, 64)
+		newWork.Share =int(share)
+		newWork.Hashrate = int(hash)
+		newWork.LastShare = int(time)
+		minerMap[work] = *newWork
+
 	}
 	return minerMap
 }
@@ -216,6 +231,23 @@ func (r *RedisClient) WriteShare(id string,params []string) (bool, error) {
 		return nil
 	})
 	return false, err
+}
+
+func (r *RedisClient) WriteShareTime(id string) {
+	tx := r.client.Multi()
+	defer tx.Close()
+	tx.Exec(func() error {
+		tx.HSet(r.formatKey("stats", "lastShare"),id,strconv.Itoa(int(time.Now().Unix())))
+		return nil
+	})
+}
+func (r *RedisClient) WriteShareHashRate(id string,hash int) {
+	tx := r.client.Multi()
+	defer tx.Close()
+	tx.Exec(func() error {
+		tx.HSet(r.formatKey("stats", "hashrate"),id,strconv.Itoa(hash))
+		return nil
+	})
 }
 
 func (r *RedisClient) WriteShareId(tx *redis.Multi, id string) {

@@ -46,6 +46,12 @@ func GetTargetHex(diff int64) string {
 	return "0x"+string(common.Bytes2Hex(diff1.Bytes()))
 }
 
+func HexToInt(targetHex string) *big.Int {
+	targetBytes := common.FromHex(targetHex)
+	return new(big.Int).SetBytes(targetBytes)
+}
+
+
 func TargetHexToDiff(targetHex string) *big.Int {
 	targetBytes := common.FromHex(targetHex)
 	return new(big.Int).Div(pow256, new(big.Int).SetBytes(targetBytes))
