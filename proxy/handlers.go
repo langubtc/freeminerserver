@@ -30,7 +30,7 @@ func (s *ProxyServer) handleLoginRPC(cs *Session, params []string, id string) (b
 }
 
 // Stratum
-func (s *ProxyServer) handleTCPSubmitRPC(cs *Session, id string, params []string ,reqId []byte) (bool, *ErrorReply) {
+func (s *ProxyServer) handleTCPSubmitRPC(cs *Session, id string, params []string, reqId []byte) (bool, *ErrorReply) {
 	s.sessionsMu.RLock()
 	_, ok := s.sessions[cs]
 	s.sessionsMu.RUnlock()
@@ -38,12 +38,12 @@ func (s *ProxyServer) handleTCPSubmitRPC(cs *Session, id string, params []string
 	if !ok {
 		return false, &ErrorReply{Code: 25, Message: "Not subscribed"}
 	}
-	return s.handleSubmitRPC(cs, cs.login, id, params,reqId)
+	return s.handleSubmitRPC(cs, cs.login, id, params, reqId)
 }
 
-func (s *ProxyServer) handleSubmitRPC(cs *Session, login, id string, params []string,reqId []byte) (bool, *ErrorReply) {
-	if !workerPattern.MatchString(id) {
-		id = "0"
+func (s *ProxyServer) handleSubmitRPC(cs *Session, login, id string, params []string, reqId []byte) (bool, *ErrorReply) {
+	if len(id) <= 0 {
+		id = "noname"
 	}
 	if len(params) != 3 {
 		log.Printf("Malformed params from %s@%s %v", login, cs.ip, params)
@@ -54,8 +54,7 @@ func (s *ProxyServer) handleSubmitRPC(cs *Session, login, id string, params []st
 		log.Printf("Malformed PoW result from %s@%s %v", login, cs.ip, params)
 		return false, &ErrorReply{Code: -1, Message: "Malformed PoW result"}
 	}
-	s.processShare(cs,login, id, cs.ip, params,reqId)
-	return false,nil
+	s.processShare(cs, login, id, cs.ip, params, reqId)
+	return false, nil
 
 }
-
