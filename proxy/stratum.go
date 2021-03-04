@@ -73,7 +73,7 @@ func (s *ProxyServer) handleTCPClient(cs *Session) error {
 			return err
 		} else if err == io.EOF {
 			log.Printf("Client %s disconnected", cs.ip)
-		//	s.removeSession(cs)
+			s.removeSession(cs)
 			break
 		} else if err != nil {
 			log.Printf("Error reading from socket: %v", err)
