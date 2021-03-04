@@ -73,7 +73,7 @@ func (s *ProxyServer) handleTCPClient(cs *Session) error {
 			return err
 		} else if err == io.EOF {
 			log.Printf("Client %s disconnected", cs.ip)
-			s.removeSession(cs)
+		//	s.removeSession(cs)
 			break
 		} else if err != nil {
 			log.Printf("Error reading from socket: %v", err)
@@ -228,7 +228,7 @@ func (s *ProxyServer) broadcastMessages(msg string) {
 			<-bcast
 			if err != nil {
 				log.Printf("board msg error to %v@%v: %v", cs.login, cs.ip, err)
-				s.removeSession(cs)
+			//	s.removeSession(cs)
 			} else {
 				s.setDeadline(cs.conn)
 			}
