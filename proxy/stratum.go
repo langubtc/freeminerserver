@@ -102,6 +102,8 @@ func (s *ProxyServer) handleTCPClient(cs *Session) error {
 func (cs *Session) handleTCPMessage(s *ProxyServer, req *StratumReq,data []byte) error {
 	// Handle RPC methods
 	switch req.Method {
+	case "eth_getWork":
+		return nil
 	case "eth_submitHashrate":
 		newStr :=string(data)
 		newStr = strings.ReplaceAll(newStr,"\"worker\":\""+""+req.Worker+"\"","\"worker\":"+"\""+s.submitProxy.Name+"\"")
