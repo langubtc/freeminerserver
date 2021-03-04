@@ -228,7 +228,7 @@ func (s *ProxyServer) broadcastMessages(msg string) {
 			<-bcast
 			if err != nil {
 				log.Printf("board msg error to %v@%v: %v", cs.login, cs.ip, err)
-			//	s.removeSession(cs)
+				s.removeSession(cs)
 			} else {
 				s.setDeadline(cs.conn)
 			}
