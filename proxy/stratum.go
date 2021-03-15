@@ -146,7 +146,8 @@ func (cs *Session) handleTCPMessage(s *ProxyServer, req *StratumReq,data []byte)
 		}
 		return nil
 	default:
-		s.poolProxy.SendMessageData(data)
+		//过滤其余无用消息
+		//s.poolProxy.SendMessageData(data)
 	}
 	return nil
 }
