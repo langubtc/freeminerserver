@@ -2,8 +2,8 @@ package proxy
 
 import (
 	"encoding/json"
-	"github.com/panglove/freeminerserver/rpc"
 	"github.com/ethereum/ethash"
+	"github.com/panglove/freeminerserver/rpc"
 	"log"
 	"sync"
 )
@@ -43,7 +43,7 @@ func (s *ProxyServer) OnSubmitMessages(result string) {
 	newSubResult := new(rpc.JSONRpcResp)
 	err := json.Unmarshal([]byte(result), newSubResult)
 
-	if err != nil {
+	if err != nil || newSubResult.Id == nil || newSubResult.Result == nil {
 		return
 	}
 	var idIndex int
