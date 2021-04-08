@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="cccf29f2-2684-45e5-898e-7a53d9197f5d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/proxy/miner.go" beforeDir="false" afterPath="$PROJECT_DIR$/proxy/miner.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pool-proxy/proxy.go" beforeDir="false" afterPath="$PROJECT_DIR$/pool-proxy/proxy.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -160,7 +160,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>

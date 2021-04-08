@@ -21,8 +21,8 @@ type PoolProxy struct {
 	Address             string
 	Name                string
 	IsReadMsg           bool
-	ReadMux sync.RWMutex
-	isReconnecting bool
+	ReadMux             sync.RWMutex
+	isReconnecting      bool
 	MessageListenerList []func(string)
 	net.Conn
 }
@@ -81,35 +81,36 @@ func (this *PoolProxy) SendMessage(id int, method string, params []string, work 
 	if this.Conn == nil {
 		return
 	}
-	newMsg := new(StratumReq)
-	newMsg.Id = id
-	newMsg.Method = method
-	newMsg.Params = params
-	newMsg.Worker = work
 
-	newMsgBuff, _ := json.Marshal(newMsg)
-
-	log.Println("send message :", string(newMsgBuff))
-	_, err := this.Write([]byte(string(newMsgBuff) + "\n"))
-
-	if err != nil {
-		log.Println("Send Message Error :", err)
-	}
+	go func() {
+		newMsg := new(StratumReq)
+		newMsg.Id = id
+		newMsg.Method = method
+		newMsg.Params = params
+		newMsg.Worker = work
+		newMsgBuff, _ := json.Marshal(newMsg)
+		log.Println("send message :", string(newMsgBuff))
+		_, err := this.Write([]byte(string(newMsgBuff) + "\n"))
+		if err != nil {
+			log.Println("Send Message Error :", err)
+		}
+	}()
 
 }
 func (this *PoolProxy) SendMessageData(data []byte) {
-	if this.Conn == nil {
-		return
-	}
-	log.Println("send message :", string(data))
-	_, err := this.Write([]byte(string(data) + "\n"))
+	go func() {
+		if this.Conn == nil {
+			return
+		}
+		log.Println("send message :", string(data))
+		_, err := this.Write([]byte(string(data) + "\n"))
 
-	if err != nil {
-		log.Println("Send Message Error :", err)
-	}
-
+		if err != nil {
+			log.Println("Send Message Error :", err)
+		}
+	}()
 }
-func (this *PoolProxy) SendMessageSync(id int, method string, params []string, work string)string {
+func (this *PoolProxy) SendMessageSync(id int, method string, params []string, work string) string {
 	if this.Conn == nil {
 		return ""
 	}
@@ -220,10 +221,9 @@ func (this *PoolProxy) ReadMessage() {
 
 			for kc, _ := range this.MessageListenerList {
 
-				this.MessageListenerList[kc](msgStr)
+				go this.MessageListenerList[kc](msgStr)
 
 			}
-
 
 		}
 		this.Connect()
