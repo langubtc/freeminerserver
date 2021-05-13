@@ -48,11 +48,16 @@ func (s *ProxyServer) OnSubmitMessages(result string) {
 	}
 	var idIndex int
 	json.Unmarshal(*newSubResult.Id, &idIndex)
-	if idIndex <= miniSubmitId || submitMap[idIndex] == nil {
+
+	submitMux.Lock()
+	indexInfo:= submitMap[idIndex]
+	submitMux.Unlock()
+	if idIndex <= miniSubmitId || indexInfo == nil {
 		return
 	}
+	submitMux.Lock()
 	subInfo := *submitMap[idIndex]
-
+	submitMux.Unlock()
 	log.Println("submit reback:", result, subInfo)
 
 	var reply bool
