@@ -57,6 +57,7 @@ func (s *ProxyServer) OnSubmitMessages(result string) {
 	}
 	submitMux.Lock()
 	subInfo := *submitMap[idIndex]
+	delete(submitMap,idIndex) //free mem
 	submitMux.Unlock()
 	log.Println("submit reback:", result, subInfo)
 
