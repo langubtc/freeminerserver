@@ -166,6 +166,7 @@ func (r *RedisClient) GetNodeStates() ([]map[string]interface{}, error) {
 }
 
 func (r *RedisClient) checkPoWExist(params []string) (bool, error) {
+	return false,nil
 	val, err := r.client.ZAdd(r.formatKey("pow"), redis.Z{Score: float64(666666), Member: strings.Join(params, ":")}).Result()
 	return val == 0, err
 }
