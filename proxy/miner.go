@@ -2,10 +2,10 @@ package proxy
 
 import (
 	"encoding/json"
-	"github.com/ethereum/ethash"
-	"github.com/panglove/freeminerserver/rpc"
 	"log"
 	"sync"
+
+	"github.com/panglove/freeminerserver/rpc"
 )
 
 type SubmitInfo struct {
@@ -21,7 +21,6 @@ const miniSubmitId = 1000
 
 var submitId = miniSubmitId
 var submitMux sync.RWMutex
-var hasher = ethash.New()
 
 var submitMap = make(map[int]*SubmitInfo)
 
@@ -50,14 +49,14 @@ func (s *ProxyServer) OnSubmitMessages(result string) {
 	json.Unmarshal(*newSubResult.Id, &idIndex)
 
 	submitMux.Lock()
-	indexInfo:= submitMap[idIndex]
+	indexInfo := submitMap[idIndex]
 	submitMux.Unlock()
 	if idIndex <= miniSubmitId || indexInfo == nil {
 		return
 	}
 	submitMux.Lock()
 	subInfo := *submitMap[idIndex]
-	delete(submitMap,idIndex) //free mem
+	delete(submitMap, idIndex) //free mem
 	submitMux.Unlock()
 	log.Println("submit reback:", result, subInfo)
 
